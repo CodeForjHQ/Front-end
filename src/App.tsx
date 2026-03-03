@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Features from "./pages/Features";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import ProductEngine from "./pages/ProductEngine";
 import NotFound from "./pages/NotFound";
 import CookieBanner from "./components/CookieBanner";
 
@@ -47,6 +48,7 @@ const App = () => (
           <Route path="/features" element={<Features />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/codeforj-engine" element={<ProductEngine />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

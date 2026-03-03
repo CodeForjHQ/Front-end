@@ -90,7 +90,7 @@ const Header = () => {
 
         {/* Desktop CTA */}
         <Link
-          to="/contact"
+          to="/codeforj-engine"
           className="group relative hidden lg:inline-flex items-center gap-3 pl-6 pr-1.5 py-1.5 rounded-full bg-foreground text-background text-sm font-bold font-heading hover:bg-primary hover:text-white transition-all duration-500 shadow-xl overflow-hidden active:scale-95"
         >
           <span className="relative z-10 transition-colors duration-300">CodeForj Engine</span>
@@ -174,7 +174,7 @@ const Header = () => {
                 className="pt-2"
               >
                 <Link
-                  to="/contact"
+                  to="/codeforj-engine"
                   onClick={() => setMobileOpen(false)}
                   className="group relative flex items-center justify-between pl-8 pr-2 py-2 rounded-full bg-foreground text-background text-lg font-black font-heading hover:bg-primary hover:text-white transition-all duration-500 shadow-xl overflow-hidden active:scale-95"
                 >

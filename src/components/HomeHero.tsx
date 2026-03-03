@@ -61,7 +61,7 @@ const HomeHero = ({ title, subtitle, ctaLabel, ctaLink }: HomeHeroProps) => {
                     className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 w-full sm:w-auto px-4 sm:px-0"
                 >
                     <Link
-                        to={ctaLink || "/contact"}
+                        to={ctaLink || "/codeforj-engine"}
                         className="w-full sm:w-auto px-10 py-3.5 rounded-full bg-primary text-white font-bold text-sm text-center shadow-[0_0_30px_rgba(var(--primary),0.2)] hover:shadow-[0_0_40px_rgba(var(--primary),0.4)] hover:scale-[1.02] transition-all duration-300 active:scale-95"
                     >
                         {ctaLabel || "Start Free Trial"}
