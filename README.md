@@ -1,73 +1,136 @@
-# Welcome to your Lovable project
+# CodeForjHQ Website
 
-## Project info
+Premium AI Developer Productivity & Code Management Platform  
+Multi-page frontend built with React + Tailwind CSS + Framer Motion.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Dark, command-center enterprise design. Fully responsive. Production ready.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Overview
 
-**Use Lovable**
+This project is the official marketing website frontend for **CodeForjHQ.com**.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+It includes:
 
-Changes made via Lovable will be committed automatically to this repo.
+- Multi-page architecture using React Router
+- High-performance animations via Framer Motion
+- Mobile-first responsive layout
+- Enterprise dark UI
+- Modular component architecture
+- Production-ready structure
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🎨 Design System
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Theme
 
-Follow these steps:
+| Element | Value |
+|---------|--------|
+| Background | `#000000` |
+| Text | `#F1F9F4` |
+| Accent | `#F60670` |
+| Card Background | `#0E0E0E` |
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Typography
+- Headings → **Onest**
+- Body → **Manrope**
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### UI Style
+- Command-center aesthetic
+- Minimal gradients
+- Accent used only for CTAs, highlights, borders
+- Subtle shadows
+- Hover elevation on cards
+- Glow only on CTA interactions
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 📄 Pages
 
-**Edit a file directly in GitHub**
+### 1️⃣ Home
+- Hero (animated headline + node background)
+- About
+- How It Works (sequential animation)
+- Features
+- Pricing (3 tiers + monthly/yearly toggle)
+- Testimonials (fade carousel)
+- FAQ (accordion)
+- Final CTA
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 2️⃣ Features
+- Hero
+- Core Capabilities
+- Architecture (flow animation)
+- Security & Scalability
 
-**Use GitHub Codespaces**
+### 3️⃣ About
+- Hero
+- Mission
+- Vision
+- Platform Philosophy
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### 4️⃣ Use Cases
+- Hero
+- Startup SaaS
+- Enterprise Engineering
+- DevOps Teams
 
-## What technologies are used for this project?
+### 5️⃣ Contact
+- Hero
+- Contact Form
+- Enterprise Sales Info
+- Platform Information
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🧠 Animation System
 
-## How can I deploy this project?
+Built using Framer Motion.
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Includes:
 
-## Can I connect a custom domain to my Lovable project?
+- Page transitions (fade + 20px Y-slide)
+- Hero stagger reveal
+- Card hover lift + icon pulse
+- Sequential step animation
+- Accordion expand/collapse
+- Carousel fade transition
+- CTA breathing gradient
+- Desktop-only subtle background motion
+- Reduced animation on mobile for performance
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🧱 Layout Structure
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Header
+- Floating
+- Backdrop blur
+- Rounded (2xl)
+- Semi-transparent black
+- Desktop: Full nav + CTA
+- Mobile: Hamburger + slide drawer
+
+### Footer
+- Product
+- Company
+- Resources
+- Legal
+- Docs/API (Coming Soon)
+- Enterprise links
+- Privacy & Terms
+- Technical tagline
+
+---
+
+## 📱 Responsive Strategy
+
+- Mobile-first
+- Fluid hero typography (`text-4xl → text-6xl`)
+- Grid columns: `1 → 2 → 3`
+- Max width container:
+
+```css
+w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8
