@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 140 38% 96%;
+
+    --card: 0 0% 5.5%;
+    --card-foreground: 140 38% 96%;
+
+    --popover: 0 0% 5.5%;
+    --popover-foreground: 140 38% 96%;
+
+    --primary: 340 97% 49%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 140 38% 96%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 340 97% 49%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 340 97% 49%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 3%;
+    --sidebar-foreground: 140 38% 96%;
+    --sidebar-primary: 340 97% 49%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 140 38% 96%;
+    --sidebar-border: 0 0% 14%;
+    --sidebar-ring: 340 97% 49%;
+
+    --surface: 0 0% 8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(340 97% 55%), hsl(340 97% 49%), hsl(320 90% 60%));
+  }
+
+  .text-gradient-subtle {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg, hsl(var(--foreground)), hsl(0 0% 70%));
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 30px hsl(340 97% 49% / 0.3), 0 0 60px hsl(340 97% 49% / 0.1);
+  }
+
+  .glow-accent-sm {
+    box-shadow: 0 0 15px hsl(340 97% 49% / 0.2);
+  }
+
+  .glow-accent-lg {
+    box-shadow: 0 0 60px hsl(340 97% 49% / 0.25), 0 0 120px hsl(340 97% 49% / 0.1);
+  }
+
+  .breathing-gradient {
+    background: linear-gradient(135deg, hsl(340 97% 49% / 0.15), hsl(340 97% 30% / 0.05), hsl(340 97% 49% / 0.15));
+    background-size: 200% 200%;
+    animation: breathe 6s ease-in-out infinite;
+  }
+
+  @keyframes breathe {
+
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg, transparent 0%, hsl(340 97% 49% / 0.1) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px hsl(0 0% 0% / 0.5), 0 0 20px hsl(340 97% 49% / 0.08);
+  }
+
+  .card-glow {
+    @apply transition-all duration-500;
+    position: relative;
+  }
+
+  .card-glow::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, hsl(340 97% 49% / 0.3), transparent 50%, hsl(340 97% 49% / 0.1));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .card-glow:hover::before {
+    opacity: 1;
+  }
+
+  .grid-dot-pattern {
+    background-image: radial-gradient(circle, hsl(0 0% 20%) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .hero-grid {
+    background-image:
+      linear-gradient(hsl(0 0% 14% / 0.4) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(0 0% 14% / 0.4) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+}
